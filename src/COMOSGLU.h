@@ -252,6 +252,9 @@ LOCALPROC DiskEjectedNotify(tDrive Drive_No)
 {
 	vSonyWritableMask &= ~ ((ui5b)1 << Drive_No);
 	vSonyInsertedMask &= ~ ((ui5b)1 << Drive_No);
+
+	//@TODO add system call to notify host OS about disk being ejected
+	system("");
 }
 
 /*
